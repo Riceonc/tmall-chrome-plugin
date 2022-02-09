@@ -1,0 +1,49 @@
+{
+  "author": "Chaofan",
+  "name": "词根拆分",
+  "description": "天猫搜索引擎词根拆分",
+  "version": "1.0.9",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "img/icon.png",
+    "default_title": "拆分词根插件"
+  },
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "background": {
+    "scripts": ["lib/jquery.min.js","background.js"]
+  },
+  "permissions" : [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts":
+  [
+    {
+      "matches": ["<all_urls>"],
+      "js": [ "lib/jquery.min.js"],
+      "css": ["css/init.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": [ "lib/jquery.min.js","lib/jquery.cookie.js","layer/layer.js","inject.js",
+     "js/start.js","lib/crypto-js.min.js",
+        "lib/datatables.min.js","lib/dataTables.colReorder.min.js", "js/tmall.js",
+        "lib/dataTables.buttons.min.js","lib/jquery.table2excel.min.js",
+       "lib/clipboard.min.js","lib/jquery.dad.min.js","lib/xlsx.core.min.js","lib/jsencrypt.min.js"],
+      "css": [ "css/layer.css","css/datatables.min.css","css/colReorder.dataTables.min.css","css/buttons.dataTables.min.css","css/jquery.dad.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["js/*","lib/*","img/*","layer/*","css/*","lib/sysUsersId.txt","manifest.json"]
+}
