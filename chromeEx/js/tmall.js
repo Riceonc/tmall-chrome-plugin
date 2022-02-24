@@ -434,7 +434,7 @@ function crawlHandler(finish=false) {
                     },
                 });
                 $("#clone_tmall-table").click();
-                layer.msg(i18n.common_copy_success)
+                layer.msg("复制成功")
             })
             // 复制统计
             $('#copyNum').on('click', function () {
@@ -444,7 +444,7 @@ function crawlHandler(finish=false) {
                     },
                 });
                 $("#clone_tmall-table2").click();
-                layer.msg(i18n.common_copy_success)
+                layer.msg("复制成功")
             })
         },
         end: () => {
@@ -716,7 +716,7 @@ function login (userName) {
     if (localStorage.zsy_tools) {
         var version = JSON.parse(localStorage.zsy_tools).version
     } else {
-        layer.msg(i18n.common_service_function_error);
+        layer.msg("功能异常");
     }
     const data = {
         userName: userName,
@@ -734,7 +734,7 @@ function login (userName) {
             }
             if (res.code == 100001) {
                 //参数不全
-                layer.msg(i18n.common_network_connection_error);
+                layer.msg("网络开小差了,请刷新重试");
             }
             let userState = res["data"]["userStatus"];
              if (userState === 5) {

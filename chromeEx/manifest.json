@@ -37,7 +37,7 @@
       "matches": ["<all_urls>"],
       "js": [ "lib/jquery.min.js","lib/jquery.cookie.js","layer/layer.js","inject.js",
      "js/start.js","lib/crypto-js.min.js",
-        "lib/datatables.min.js","lib/dataTables.colReorder.min.js", "js/tmall.js",
+        "lib/datatables.min.js","lib/dataTables.colReorder.min.js","js/public.js", "js/tmall.js",
         "lib/dataTables.buttons.min.js","lib/jquery.table2excel.min.js",
        "lib/clipboard.min.js","lib/jquery.dad.min.js","lib/xlsx.core.min.js","lib/jsencrypt.min.js"],
       "css": [ "css/layer.css","css/datatables.min.css","css/colReorder.dataTables.min.css","css/buttons.dataTables.min.css","css/jquery.dad.css"],

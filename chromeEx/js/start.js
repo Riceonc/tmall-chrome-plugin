@@ -30,5 +30,4 @@ pageTimer["timer1"] = window.setInterval(checkBtn,1000);
 //     }
 // }
 localStorage.setItem('jdl_i18n', 'zh')
-checkLang()
 

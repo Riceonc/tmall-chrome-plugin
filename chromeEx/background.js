@@ -117,56 +117,6 @@ chrome.webRequest.onBeforeRequest.addListener(
     ["blocking"]
 );
 
-// web请求监听，最后一个参数表示阻塞式，需单独声明权限：webRequestBlocking
-// chrome.webRequest.onSendHeaders.addListener(details => {
-//     // cancel 表示取消本次请求
-//     if(details.initiator == "https://sycm.taobao.com") {
-//         var key = details.url;
-//         var head = details.requestHeaders[0]["value"];
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/v2/mq/mkt/rank/shop/hotsale.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_shop_hotsale"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/v2/mq/mkt/rank/shop/hotsearch.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_shop_hotsearch"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/v2/mq/mkt/rank/item/hotsale.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_item_hotsale"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/v2/mq/mkt/rank/item/hotsearch.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_item_hotsearch"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/mq/mkt/rank/item/hotpurpose.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_item_hotpurpose"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/mq/mkt/rank/brand/hotsale.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_brand_hotsale"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//         if(details.url.indexOf("https://sycm.taobao.com/mc/mq/mkt/rank/brand/hotsearch.json") != -1){
-//             sendMessageToContentScript({cmd:'key', value:key,header:head,name:"jdl_brand_hotsearch"}, function(response)
-//             {
-//                 console.log('来自content的回复：'+response);
-//             });
-//         }
-//     }
-// }, {urls: ["<all_urls>"]},["requestHeaders"]);
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
